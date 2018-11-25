@@ -1,0 +1,17 @@
+.example-icon {
+  padding: 0 14px;
+  float:right;
+}
+.lyricsP {
+  white-space: pre-wrap;
+}
+.player {
+  float: left;
+  width: 700px;
+}
+
+.lyrics{
+  margin-left: 10px;
+  margin-top: 10px;
+  float: left;
+}

@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span><a routerLink="/">Player</a></span>
+    &nbsp; | &nbsp;
+    <span><a routerLink="/about">About</a></span>
+    <span class="example-spacer"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-toolbar color="accent">
+  <mat-toolbar-row>
+    <span><p>Current Playing: {{currentSong.title}}</p></span>
+    <span class="example-spacer"></span>
+    <mat-icon class="example-icon" (click)="playClicked(currentSong)" [hidden]="currentSong.isActive">play_arrow</mat-icon>
+    <mat-icon class="example-icon" (click)="pauseClicked(currentSong)" [hidden]="!currentSong.isActive">pause</mat-icon>
+    <mat-icon class="example-icon" (click)="playNextSong()">skip_next</mat-icon>
+    <mat-icon class="example-icon" (click)="showPlayer=!showPlayer">slideshow</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+
+<youtube-player
+  [hidden]="showPlayer"
+  [videoId]="id"
+  width="100%"
+  (ready)="savePlayer($event)"
+  (change)="onStateChange($event)"
+  class="ytplayer"
+  allowfullscreen
+></youtube-player>
+
+
+
+
+
+
+

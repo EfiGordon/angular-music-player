@@ -1,0 +1,32 @@
+<div class="player">
+  <section class="audio-player card ">
+  <ul class="playlist list-group list-group-flush">
+    <li  class="list-group-item playlist-item" [class.active]="song.id==currentSong.id" *ngFor="let song of songs">
+      {{song.title}}
+
+      <mat-icon class="example-icon" (click)="playClicked(song)" [hidden]="currentSong.isActive && song.id===currentSong.id">play_arrow</mat-icon>
+      <!--button (click)="playClicked(song)" [disabled]="currentSong.isActive && song.id===currentSong.id"> play </button-->
+
+      <!--button (click)="pauseClicked(song)" [disabled]="currentSong.id != song.id || currentSong.id==song.id && !currentSong.isActive"> pause </button-->
+      <mat-icon class="example-icon" (click)="pauseClicked(song)"
+                [hidden]="currentSong.id != song.id || currentSong.id==song.id && !currentSong.isActive"
+      >pause_circle_outline</mat-icon>
+
+      <mat-icon class="example-icon" (click)="deleteClicked(song)">delete</mat-icon>
+    </li>
+  </ul>
+  </section>
+
+  <section>
+    <form (ngSubmit)="onAddSong(f)" #f="ngForm">
+      <input  type="text" ngModel name="songID" required placeholder='e.g: RBumgq5yVrA'>
+      <button type="submit" > Add song (youtubeID)</button>
+    </form>
+  </section>
+
+</div>
+
+<div class="lyrics">
+  <h3>lyrics:</h3>
+  <p class="lyricsP"> {{currentSong.lyrics || 'Click play to see lyrics'}} </p>
+</div>
