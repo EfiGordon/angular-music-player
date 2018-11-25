@@ -2,6 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
+NOTE:
+IF YOU CLONE THIS PROJECT AND NG-SERVE NOT WORKING, YOU NEED TO INSTALL ANGULAR MATERIAL VIA NPM.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
