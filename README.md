@@ -6,7 +6,9 @@ http://www.efigordon.com/my-player/
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
 NOTE:
-IF YOU CLONE THIS PROJECT AND NG-SERVE NOT WORKING, YOU NEED TO INSTALL ANGULAR MATERIAL VIA NPM.
+After cloning this project, you need to run 'npm install', it will install all necessarily dependices, and then just run 'ng serve' and you can see the site at 'localhost:4200'
+
+ENJOY :) 
 
 ## Development server
 
